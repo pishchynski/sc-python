@@ -1,5 +1,6 @@
-from Anton.guesser import guess_func
+from Anton.guesser import Guesser
 
 input_number = int(input("Enter your number: "))
 
-guess_func(input_number, 0, 15)
+guesser = Guesser(input_number, 15)
+guesser.guess()
