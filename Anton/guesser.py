@@ -1,7 +1,7 @@
 import random
 
 
-class Guesser:
+class Guesser(object):
     """Class for guessing numbers"""
 
     def __init__(self, number_to_guess, optimal_guess_count):
@@ -33,3 +33,5 @@ class Guesser:
         times_to_guess = self.__guess_the_num()
 
         self.__print_results(times_to_guess)
+
+        return times_to_guess

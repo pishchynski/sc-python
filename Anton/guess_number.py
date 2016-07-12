@@ -1,6 +1,6 @@
-from Anton.guesser import Guesser
+from Anton.fault_guesser import FaultGuesser
 
 input_number = int(input("Enter your number: "))
 
-guesser = Guesser(input_number, 15)
+guesser = FaultGuesser(input_number, 15, 3)
 guesser.guess()
