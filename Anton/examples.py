@@ -63,7 +63,6 @@ for c in "Python":
 else:
     print("END")
 
-
 try:
     (1 / 1)
 except:
@@ -74,34 +73,10 @@ finally:
     print("Code evaled")
 
 
+def func(value, txt="Default text"):
+    print("Value =", value)
+    print(txt)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+func(23)
+func("My Text")
 
