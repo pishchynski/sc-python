@@ -63,4 +63,45 @@ for c in "Python":
 else:
     print("END")
 
-[1, 2.23, True]
+
+try:
+    (1 / 1)
+except:
+    print("Error!")
+else:
+    print("Everything is good")
+finally:
+    print("Code evaled")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
