@@ -22,3 +22,11 @@ print(test_list)
 print(test_sub_list)
 
 print([1, 2, 3][::-1])
+
+test_list = [8, 9, 10, 20]
+
+print(test_list)
+
+test_list[1:3] = []
+
+print(test_list)
