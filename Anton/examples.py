@@ -77,6 +77,17 @@ def func(value, txt="Default text"):
     print("Value =", value)
     print(txt)
 
+
 func(23)
 func("My Text")
 
+func(txt='3', value=213)
+
+
+def my_sum(*numbers):
+    summ = 0
+    for number in numbers:
+        summ += number
+    return summ
+
+print(my_sum(1, 2, 99))
