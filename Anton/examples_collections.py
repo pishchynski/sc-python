@@ -30,3 +30,16 @@ print(test_list)
 test_list[1:3] = []
 
 print(test_list)
+
+b = tuple([1, 2, 3])
+
+print(b)
+
+c = tuple("C++")
+
+print(c)
+
+a = b + c
+
+print(a)
+
