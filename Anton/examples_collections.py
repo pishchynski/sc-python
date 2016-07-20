@@ -43,3 +43,8 @@ a = b + c
 
 print(a)
 
+lst = [1, 2, 30, 'List', 30, 30, 'list', "List"]
+
+print(set(lst))
+
+print({1, True})
