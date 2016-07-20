@@ -48,3 +48,22 @@ lst = [1, 2, 30, 'List', 30, 30, 'list', "List"]
 print(set(lst))
 
 print({1, True})
+
+print({1} == {True})
+
+lst = [["1", "Test1"],
+       ["2", "Test2"],
+       ["3", "Test3"]]
+
+dct = dict(lst)
+
+dct[4] = 200
+
+print(dct[4])
+
+print(dct.keys())
+print(dct.values())
+
+for item in dct.items():
+    print(item)
+
