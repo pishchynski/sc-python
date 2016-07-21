@@ -70,3 +70,17 @@ try:
     print(empty2.field)
 except:
     print("empty2 has no fields with name 'field'")
+
+
+class SpeakClass:
+    def speak(self):
+        print("Hi There")
+
+obj = SpeakClass()
+obj.speak()
+
+SpeakClass.speak(obj)
+SpeakClass.speak("Random text")
+
+
+
