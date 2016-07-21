@@ -160,3 +160,7 @@ class Box(BoxSize, BoxParams):
 
 print("\n")
 box = Box(10, 20, 30, 5, "Красная")
+
+print(object.__doc__)
+print(Box.__mro__)
+print(Box.__qualname__)
