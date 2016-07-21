@@ -76,6 +76,7 @@ class SpeakClass:
     def speak(self):
         print("Hi There")
 
+
 obj = SpeakClass()
 obj.speak()
 
@@ -83,4 +84,35 @@ SpeakClass.speak(obj)
 SpeakClass.speak("Random text")
 
 
+class ComplexNum:
+    def __init__(self, x=0, y=0):
 
+        if type(x) == ComplexNum:
+            self.Re = x.Re
+            self.Im = x.Im
+        else:
+            self.Re = x
+            self.Im = y
+
+    def show(self):
+        print("Re =", self.Re)
+        print("Im =", self.Im)
+
+a = ComplexNum(1, 2)
+b = ComplexNum(a)
+
+print("\nNumber a:")
+a.show()
+
+print("Number b:")
+b.show()
+
+print("CHANGING a")
+a.Re = 20
+a.Im = 20
+
+print("Number a:")
+a.show()
+
+print("Number b:")
+b.show()
