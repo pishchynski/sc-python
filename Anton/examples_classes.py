@@ -98,6 +98,7 @@ class ComplexNum:
         print("Re =", self.Re)
         print("Im =", self.Im)
 
+
 a = ComplexNum(1, 2)
 b = ComplexNum(a)
 
@@ -116,3 +117,46 @@ a.show()
 
 print("Number b:")
 b.show()
+
+
+class BoxSize:
+    def __init__(self, width, height, depth):
+        self.width = width
+        self.height = height
+        self.depth = depth
+
+    def volume(self):
+        return self.width * self.height * self.depth
+
+    def show(self):
+        print("Box size and volume:")
+        print("Width:", self.width)
+        print("Height:", self.height)
+        print("Depth:", self.depth)
+        print("Volume:", self.volume())
+
+
+class BoxParams:
+    def __init__(self, weight, color):
+        self.weight = weight
+        self.color = color
+
+    def show(self):
+        print("Extra box params:")
+        print("Weight:", self.weight)
+        print("Color:", self.color)
+
+
+class Box(BoxSize, BoxParams):
+    def __init__(self, width, height, depth, weight, color):
+        BoxSize.__init__(self, width, height, depth)
+        BoxParams.__init__(self, weight, color)
+        self.show()
+
+    def show(self):
+        BoxParams.show(self)
+        print()
+        BoxSize.show(self)
+
+print("\n")
+box = Box(10, 20, 30, 5, "Красная")
