@@ -1,4 +1,4 @@
-from Anton.guesser import Guesser
+from Anton.number_guesser.guesser import Guesser
 
 
 class FaultGuesser(Guesser):
