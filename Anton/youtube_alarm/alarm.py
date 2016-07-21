@@ -1,3 +1,4 @@
+import webbrowser
 from random import randint
 
 
@@ -16,5 +17,4 @@ links = get_links("links.txt")
 random_link_index = randint(0, len(links) - 1)
 random_link = links[random_link_index]
 
-print(links)
-print(random_link)
+webbrowser.open(random_link)
