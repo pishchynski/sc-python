@@ -1,3 +1,6 @@
+from math import exp, sin, cos, tan
+
+
 def show(*args):
     i = 0
     for arg in args:
@@ -27,3 +30,42 @@ v_show(10, 20, 50, 60, 70, third=30, fourth=40)
 v_show(10, 20, third=30, fourth=40)
 v_show(second=20, first=10)
 v_show(second=20, first=10, third=30)
+
+
+def F(f):
+    return lambda x: exp(-f(x) ** 2)
+
+
+def Q(f):
+    def q(x):
+        return tan(f(x))
+
+    return q
+
+
+@F
+def f(x):
+    return sin(x)
+
+
+@F
+def g(x):
+    return cos(x)
+
+
+@Q
+@F
+def h(x):
+    return x
+
+
+n = 5
+print("\nf(x):")
+for i in range(n + 1):
+    z = i / n
+    print(f(z), "->", exp(-sin(z) ** 2))
+
+print("\nh(x):")
+for i in range(n + 1):
+    z = i / n
+    print(h(z), "->", tan(exp(-z ** 2)))
