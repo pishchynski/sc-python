@@ -40,3 +40,33 @@ del test
 del red
 
 print("Program END")
+
+
+class Empty:
+    pass
+
+
+empty1 = Empty()
+empty1.field = "FIELD"
+
+print(empty1.field)
+
+empty2 = Empty()
+empty2.field = 234
+
+print(empty2.field)
+
+Empty.field = True
+
+print(empty2.field)
+
+del empty2.field
+
+print(empty2.field)
+
+del Empty.field
+
+try:
+    print(empty2.field)
+except:
+    print("empty2 has no fields with name 'field'")
