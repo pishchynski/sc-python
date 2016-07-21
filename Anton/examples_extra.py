@@ -69,3 +69,16 @@ print("\nh(x):")
 for i in range(n + 1):
     z = i / n
     print(h(z), "->", tan(exp(-z ** 2)))
+
+
+def func_with_docs(a: "Первый аргумент", b: int = 0) -> None:
+    """Тестрование док-фукций"""
+    print("a=", a)
+    print("b=", b)
+
+
+print("\n")
+func_with_docs(123)
+func_with_docs(123, 20)
+print(func_with_docs.__annotations__)
+print(func_with_docs.__doc__)
