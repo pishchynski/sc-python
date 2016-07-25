@@ -1,4 +1,5 @@
 import numpy as np
+
 a = np.array([1, 2, 3])
 print(a)
 
@@ -25,3 +26,12 @@ print()
 
 print(np.linspace(1, 5, 9))
 
+
+def f1(i, j):
+    print("i:", i)
+    print("j:", j)
+    return 3 * i + j
+
+np.fromfunction(f1, (3, 3))
+
+print(np.arange(0, 3000, 1))
