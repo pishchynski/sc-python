@@ -1,4 +1,5 @@
 import numpy as np
+import random
 
 a = np.array([1, 2, 3])
 print(a)
@@ -53,5 +54,21 @@ print("cos(X): ", np.cos(x))
 
 a = np.array([[1, 2, 3], [4, 5, 6]])
 print("\nA: ", a)
-print("Min in a columns(a.min(axis=0)): ", a.min(axis=0))
-print("Min in a rows(a.min(axis=1)): ", a.min(axis=1))
+print("Min in a columns (a.min(axis=0)): ", a.min(axis=0))
+print("Min in a rows (a.min(axis=1)): ", a.min(axis=1))
+
+rand = np.array([random.random() for i in range(10)])
+print("\n", rand)
+
+print(np.random.sample(10))
+
+a = np.arange(10)
+
+print()
+
+print(a)
+np.random.shuffle(a)
+print(a)
+
+print()
+print(np.random.choice(np.arange(10), 10, p=[0.5, 0.25, 0.25, 0, 0, 0, 0, 0, 0, 0]))
