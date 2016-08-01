@@ -27,3 +27,8 @@ b = T.vector() # declare variable
 out = a ** 2 + b ** 2 + 2 * a * b               # build symbolic expression
 f = function([a, b], out)   # compile function
 print(f([0, 1, 2], [2, 1, 0]))
+
+x = T.dmatrix('x')
+s = 1 / (1 + T.exp(-x))
+logistic = function([x], s)
+print(logistic([[0, 1], [-1, -2]]))
