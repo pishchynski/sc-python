@@ -2,6 +2,7 @@ import numpy as np
 import theano.tensor as T
 from theano import function
 from theano import pp
+from theano import shared
 
 x = T.dscalar('x')
 y = T.dscalar('y')
@@ -40,3 +41,19 @@ diff_squared = diff ** 2
 f = function([a, b], [diff, abs_diff, diff_squared] )
 print()
 print(f([[1, 1], [1, 1]], [[0, 1], [2, 3]]))
+
+state = shared(0)
+inc = T.iscalar('inc')
+
+accumulator = function([inc], state, updates=[(state, state + inc)])
+decrementor = function([inc], state, updates=[(state, state - inc)])
+
+print()
+print(state.get_value())
+accumulator(1)
+print(state.get_value())
+accumulator(300)
+print(state.get_value())
+decrementor(2)
+print(state.get_value())
+
