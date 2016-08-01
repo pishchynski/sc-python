@@ -9,6 +9,7 @@
 .idea/vcs.xml
 .idea/jsLibraryMappings.xml
 */.idea
+Machine_learn/donate_blood/Pasha/Blood/.idea
 
 # Sensitive or high-churn files:
 .idea/dataSources.ids
