@@ -32,3 +32,11 @@ x = T.dmatrix('x')
 s = 1 / (1 + T.exp(-x))
 logistic = function([x], s)
 print(logistic([[0, 1], [-1, -2]]))
+
+a, b = T.dmatrices('a', 'b')
+diff = a - b
+abs_diff = abs(diff)
+diff_squared = diff ** 2
+f = function([a, b], [diff, abs_diff, diff_squared] )
+print()
+print(f([[1, 1], [1, 1]], [[0, 1], [2, 3]]))
