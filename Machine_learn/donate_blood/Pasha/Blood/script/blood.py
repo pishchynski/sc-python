@@ -1,5 +1,5 @@
 import numpy as np
-with open('../data/train_data.csv', mode='r') as f:
+with open('../../../data/train_data.csv', mode='r') as f:
     dataset = np.loadtxt(f, delimiter=',')
 
 ids = dataset[1:,0]
@@ -32,3 +32,15 @@ predicted = model.predict(n_features)
 # summarize the fit of the model
 print(metrics.classification_report(expected, predicted))
 print(metrics.confusion_matrix(expected, predicted))
+
+print()
+
+print()
+print(type(features))
+
+features_list = n_features.tolist()
+
+model.fit(features_list, targets)
+predicted = model.predict(n_features)
+print(metrics.confusion_matrix(expected, predicted))
+
