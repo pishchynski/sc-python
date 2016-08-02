@@ -20,8 +20,8 @@ print(model.feature_importances_)
 
 # algorythm
 from sklearn import metrics
-from sklearn.svm import SVC
-model = SVC()
+from sklearn.tree import DecisionTreeClassifier
+model = DecisionTreeClassifier()
 model.fit(n_features, targets)
 print(model)
 
