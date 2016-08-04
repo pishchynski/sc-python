@@ -12,7 +12,7 @@
 Machine_learn/donate_blood/Pasha/Blood/.idea
 Machine_learn/water_pump/Pasha/.idea
 Machine_learn/water_pump/.idea
-Machine_learn/atm/
+Machine_learn/atm/*
 
 # Sensitive or high-churn files:
 .idea/dataSources.ids
