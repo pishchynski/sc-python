@@ -27,5 +27,3 @@ class BoundsGuesser(Guesser):
         self.guess()
         print("Guessed number: ", self.get_guessed_number())
         print("Attempts: ", self.get_attempts())
-
-guesser = BoundsGuesser()
