@@ -1,6 +1,16 @@
-import matplotlib.pyplot as plt                                                                                                                                                               
 import numpy as np
-x = np.arange(0,100,0.00001)
-y = x*np.sin(2*np.pi*x)
-plt.plot(y)
-plt.savefig("test.svg", format="svg")
+import matplotlib.pyplot as plt
+
+figure = plt.figure()
+plt.subplot(111)
+
+X = np.linspace(-np.pi, np.pi, 256, endpoint=True)
+C, S = np.cos(X), np.sin(X)
+
+plt.plot(X, C)
+plt.plot(X, S)
+
+plt.ylim([-1.0, 1.0])
+plt.xlim([-3, 3])
+
+figure.savefig('sine_wave_plot.svg')
