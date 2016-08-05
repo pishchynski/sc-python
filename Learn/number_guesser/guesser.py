@@ -28,11 +28,5 @@ class Guesser:
     def get_attempts(self) -> int:
         return self.attempts
 
-
-number = int(input("Select number in [1..100] range: "))
-attempts = int(input("Select max number of attempts: "))
-
-guesser = Guesser(number, attempts)
-guesser.guess_user_number()
-print("Guessed number: ", guesser.get_guessed_number())
-print("Attempts: ", guesser.get_attempts())
+    def guess(self):
+        self.guess_user_number()
