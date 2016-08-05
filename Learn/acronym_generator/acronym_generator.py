@@ -6,15 +6,15 @@ class AcronymGenerator:
     def generate(self, *args: "str with phrase to acronymize, phrase to acronymize splitted to words", **kwargs) -> str:
         if (kwargs['line'] != ""):
             words = [word for word in self.__parse(kwargs['line'])]
-            words.append(list(args))
+            words += list(args)
         else:
             words = list(args)
 
 
-        letter = lambda str: str[0]
+        first_letter = lambda str: str[0]
         result = ""
         for word in words:
-            result += letter(word)
+            result += first_letter(word)
         result = result.upper()
         return result
 
