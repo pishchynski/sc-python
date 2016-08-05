@@ -14,7 +14,7 @@ class BoundsGuesser(Guesser):
 
     def guess(self):
         self.guess_user_number()
-        while(not self.min_attempts_check()):
+        while (not self.min_attempts_check()):
             self.guess_user_number()
 
 number = int(input("Select number in [1..100] range: "))

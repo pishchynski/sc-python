@@ -13,9 +13,9 @@ class Guesser:
     def guess_user_number(self):
         count = 0
         while (count > self.max_attempts) or (count == 0):
-            count = 0
-            count += 1
             guessed_number = randint(1, 100)
+            count = 1
+
             while (guessed_number != self.user_number and count <= self.max_attempts):
                 guessed_number = randint(1, 100)
                 count += 1
