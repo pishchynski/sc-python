@@ -1,5 +1,9 @@
 class AcronymGenerator:
     """Generates acronym from any sequence of words"""
+
+    def __init__(self):
+        self.launch()
+
     def __parse(self, line: "str to parse to list") -> list:
         return line.split()
 
@@ -20,5 +24,4 @@ class AcronymGenerator:
 
     def launch(self):
         phrase = input("input phrase to make acronym: ")
-        generator = AcronymGenerator()
-        print(generator.generate('soft', 'club', line=phrase))
+        print(self.generate('soft', 'club', line=phrase))
