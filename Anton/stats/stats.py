@@ -1,16 +1,22 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-figure = plt.figure()
-plt.subplot(111)
+a = np.linspace(0, 10, 100)
+b = np.log(a)
+# plt.plot(a, b)
 
-X = np.linspace(-np.pi, np.pi, 256, endpoint=True)
-C, S = np.cos(X), np.sin(X)
+x = np.random.normal(size=200)
+# plt.hist(x, bins=30)
 
-plt.plot(X, C)
-plt.plot(X, S)
+k = np.random.rand(100)
+l = np.random.rand(100)
+# plt.scatter(k, l)
 
-plt.ylim([-1.0, 1.0])
-plt.xlim([-3, 3])
+r = np.arange(0, 3.0, 0.01)
+theta = 2 * np.pi * r
+ax = plt.subplot(111, projection="polar")
+ax.plot(theta, r, color="r", linewidth=3)
+ax.set_rmax(2.0) 
 
-figure.savefig('sine_wave_plot.svg')
+
+plt.show()
