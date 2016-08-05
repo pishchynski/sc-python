@@ -3,9 +3,9 @@ class AcronymGenerator:
     def __parse(self, line: "str to parse to list") -> list:
         return line.split()
 
-    def generate(self, line="", *args: "str with phrase to acronymize, phrase to acronymize splitted to words") -> str:
-        if (line != ""):
-            words = [word for word in self.__parse(line)]
+    def generate(self, *args: "str with phrase to acronymize, phrase to acronymize splitted to words", **kwargs) -> str:
+        if (kwargs['line'] != ""):
+            words = [word for word in self.__parse(kwargs['line'])]
             words.append(list(args))
         else:
             words = list(args)
