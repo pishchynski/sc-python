@@ -1,4 +1,4 @@
-from learn_app.number_guesser.guesser import Guesser
+from number_guesser.guesser import Guesser
 
 class BoundsGuesser(Guesser):
     def __init__(self, user_number, min_attempts, max_attempts):
