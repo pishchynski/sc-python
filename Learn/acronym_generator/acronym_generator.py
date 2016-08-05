@@ -18,6 +18,7 @@ class AcronymGenerator:
         result = result.upper()
         return result
 
-phrase = input("input phrase to make acronym: ")
-generator = AcronymGenerator()
-print(generator.generate('soft', 'club', line = phrase))
+    def launch(self):
+        phrase = input("input phrase to make acronym: ")
+        generator = AcronymGenerator()
+        print(generator.generate('soft', 'club', line=phrase))
