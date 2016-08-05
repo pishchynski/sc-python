@@ -27,6 +27,3 @@ class Guesser:
 
     def get_attempts(self) -> int:
         return self.attempts
-
-    def guess(self):
-        self.guess_user_number()
